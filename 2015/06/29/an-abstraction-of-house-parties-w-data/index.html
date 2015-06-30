@@ -19,14 +19,14 @@
     <meta property="og:site_name" content="Urban Intellect">
     <meta property="og:type" content="article">
     <meta property="og:title" content="An Abstraction of House Parties">
-    <meta property="og:description" content="House parties are a common social gatherings and pastimes in the college ecosystems. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This studies hopes...">
+    <meta property="og:description" content="House parties are a common social gathering and pastime in the college ecosystem. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This study hopes...">
     <meta property="og:url" content="http://localhost:2368/2015/06/29/an-abstraction-of-house-parties-w-data/">
     <meta property="article:published_time" content="2015-06-29T23:54:06.323Z">
-    <meta property="article:modified_time" content="2015-06-30T01:26:46.853Z">
+    <meta property="article:modified_time" content="2015-06-30T02:12:35.750Z">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="An Abstraction of House Parties">
-    <meta name="twitter:description" content="House parties are a common social gatherings and pastimes in the college ecosystems. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This studies hopes...">
+    <meta name="twitter:description" content="House parties are a common social gathering and pastime in the college ecosystem. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This study hopes...">
     <meta name="twitter:url" content="http://localhost:2368/2015/06/29/an-abstraction-of-house-parties-w-data/">
     
     <script type="application/ld+json">
@@ -44,8 +44,8 @@
     "headline": "An Abstraction of House Parties",
     "url": "http://localhost:2368/2015/06/29/an-abstraction-of-house-parties-w-data/",
     "datePublished": "2015-06-29T23:54:06.323Z",
-    "dateModified": "2015-06-30T01:26:46.853Z",
-    "description": "House parties are a common social gatherings and pastimes in the college ecosystems. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This studies hopes..."
+    "dateModified": "2015-06-30T02:12:35.750Z",
+    "description": "House parties are a common social gathering and pastime in the college ecosystem. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This study hopes..."
 }
     </script>
 
@@ -77,18 +77,7 @@
 </head>
 <body class="post-template nav-closed">
 
-    <div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="index.html#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-            <li class="nav-home" role="presentation"><a href="http://localhost:2368index.html">Home</a></li>
-    </ul>
-    <a class="subscribe-button icon-feed" href="../../../../rss/index.rss">Subscribe</a>
-</div>
-<span class="nav-cover"></span>
-
+    
 
     <div class="site-wrapper">
 
@@ -98,7 +87,6 @@
 <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
         
-            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
     </nav>
 </header>
 
@@ -113,45 +101,55 @@
         </header>
 
         <section class="post-content">
-            <p>House parties are a common social gatherings and pastimes in the college ecosystems. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This studies hopes to examine the nature of them by accessing data from <a href="https://dev.twitter.com/">twitter</a> and <a href="http://instagram.com/">instagram</a> in order to determine how successful it can be. We will be focusing on girl to guy ratio (emphasis on the girls) as well as time of day the events are posted to social networks.  A friend of mine (wassup Cam!!) had a party on a pretty big weekend in our city and I figured that it would be the perfect time to collect some data. Using <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/piechart">google charts </a> I was able to generate these cool charts. Check them out.</p>
+            <p>House parties are a common social gathering and pastime in the college ecosystem. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This study hopes to examine the nature of them by accessing data from <a href="https://dev.twitter.com/">twitter</a> and <a href="http://instagram.com/">instagram</a> in order to determine how successful it can be. We will be focusing on girl to guy ratio (emphasis on the girls) as well as time of day the events are posted to social networks.  A friend of mine (wassup Cam!!) had a party on a pretty big weekend in our city and I figured that it would be the perfect time to collect some data. Using <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/piechart">google charts </a> I was able to generate these cool charts. Check them out.</p>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>  
+<script type="text/javascript">  
+  google.load("visualization", '1.1', {packages:['corechart']});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var oldData = google.visualization.arrayToDataTable(
+      [
+       ['Gender', 'Total'],
+          ['Male',     51],
+          ['Female',      77]]
 
-<p><script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {</p>
+      )
 
-<pre><code>    var data = google.visualization.arrayToDataTable([
-      ['Gender', 'Total'],
-      ['Male',     51],
-      ['Female',      77]
+    ;
 
-    ]);
+    var newData = google.visualization.arrayToDataTable([
+       ['Social Medium', 'Total'],
+          ['Instagram',     71],
+          ['Twitter',     39],
+          ['Word of mouth',      20]]);
 
-     var options = {
-      title: 'Gender Ratio',
-      is3D: true,
-    };
+    var social_options = { pieSliceText: 'none', is3D:true, title:"Social Media data"};
+    var gender_options = { pieSliceText: 'none', is3D:true, title:"Gender ratio"};
+
+    var chartBefore = new google.visualization.PieChart(document.getElementById('piechart_before'));
+    var chartAfter = new google.visualization.PieChart(document.getElementById('piechart_after'));
 
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    chartBefore.draw(oldData, gender_options);
+    chartAfter.draw(newData, social_options);
 
-    chart.draw(data, options);
+
   }
-&lt;/script&gt;
-&lt;div id="piechart" style="width: 900px; height: 500px;"&gt;&lt;/div&gt;
-</code></pre>
+</script>  
 
-<h3 id="conclusion">CONCLUSION:</h3>
+<p><span id="piechart_before" style="width: 450px; display: inline-block"></span> <br>
+<span id="piechart_after" style="width: 450px; display: inline-block"></span></p>
 
-<p>Party was getting ready to be epic and as you know the feds came through any shut it down, so no after party information was collected. </p>
+<h4 id="conclusion">CONCLUSION:</h4>
+
+<p>As the party was reaching its peak the feds came through and shut it down, so no after party information was collected, but in case you were wondering it was live!!</p>
             <section class="comment">
     <div class="g-comments" data-href="http://localhost:2368/2015/06/29/an-abstraction-of-house-parties-w-data/" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>
     <script async type="text/javascript" src="http://apis.google.com/js/plusone.js?callback=gpcb"></script>
-    </p><noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
 </section>
-        
+        </section>
 
         <footer class="post-footer">
 
