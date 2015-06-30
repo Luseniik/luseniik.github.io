@@ -1,3 +1,35 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Urban Intellect</title><description>Essentialist. Developer. Hypebeast. Scholar. </description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 29 Jun 2015 02:26:14 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Final Four Map</title><description>&lt;p&gt;I'm not going to lie, as odd as it may seem I don't follow sports too much. The arguments my friends have is the closet thing to ESPN to me. Anyway, during the national championship I thought it would be cool to scrape some data from Twitter just to see&lt;/p&gt;</description><link>http://localhost:2368/2015/06/28/final-four-map/</link><guid isPermaLink="false">e8347cfa-6d6e-4770-8db8-1e461f40c702</guid><dc:creator>Krom</dc:creator><pubDate>Sun, 28 Jun 2015 23:45:00 GMT</pubDate><content:encoded>&lt;p&gt;I'm not going to lie, as odd as it may seem I don't follow sports too much. The arguments my friends have is the closet thing to ESPN to me. Anyway, during the national championship I thought it would be cool to scrape some data from Twitter just to see what folks were talking about.I believe I got roughly 11000 tweets. Check it out.. &lt;strong&gt;Oh yeah it is interactive, so click around and see who was hating.&lt;/strong&gt;  &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Urban Intellect</title><description>Essentialist. Developer. Hypebeast. Scholar. </description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 30 Jun 2015 01:40:01 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>An Abstraction of House Parties</title><description>&lt;p&gt;House parties are a common social gatherings and pastimes in the college ecosystems. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This studies hopes to examine the nature of them by accessing data from&lt;/p&gt;</description><link>http://localhost:2368/2015/06/29/an-abstraction-of-house-parties-w-data/</link><guid isPermaLink="false">80faea0f-212d-420a-989f-22480d29efc5</guid><dc:creator>Krom</dc:creator><pubDate>Mon, 29 Jun 2015 23:54:06 GMT</pubDate><content:encoded>&lt;p&gt;House parties are a common social gatherings and pastimes in the college ecosystems. There are many factors that attribute to the success rate of these events such as location, timing, gender ratio, available space, marketing, and music. This studies hopes to examine the nature of them by accessing data from &lt;a href="https://dev.twitter.com/"&gt;twitter&lt;/a&gt; and &lt;a href="http://instagram.com/"&gt;instagram&lt;/a&gt; in order to determine how successful it can be. We will be focusing on girl to guy ratio (emphasis on the girls) as well as time of day the events are posted to social networks.  A friend of mine (wassup Cam!!) had a party on a pretty big weekend in our city and I figured that it would be the perfect time to collect some data. Using &lt;a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/piechart"&gt;google charts &lt;/a&gt; I was able to generate these cool charts. Check them out.&lt;/p&gt;
+
+&lt;script type="text/javascript" src="https://www.google.com/jsapi"&gt;&lt;/script&gt;  
+
+&lt;p&gt;&lt;script type="text/javascript"&gt;
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var data = google.visualization.arrayToDataTable([
+      ['Gender', 'Total'],
+      ['Male',     51],
+      ['Female',      77]
+
+    ]);
+
+     var options = {
+      title: 'Gender Ratio',
+      is3D: true,
+    };
+
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+&amp;lt;/script&amp;gt;
+&amp;lt;div id="piechart" style="width: 900px; height: 500px;"&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="conclusion"&gt;CONCLUSION:&lt;/h3&gt;
+
+&lt;p&gt;Party was getting ready to be epic and as you know the feds came through any shut it down, so no after party information was collected. &lt;/p&gt;&lt;/script&gt;&lt;/p&gt;</content:encoded></item><item><title>Final Four Map</title><description>&lt;p&gt;I'm not going to lie, as odd as it may seem I don't follow sports too much. The arguments my friends have is the closet thing to ESPN to me. Anyway, during the national championship I thought it would be cool to scrape some data from Twitter just to see&lt;/p&gt;</description><link>http://localhost:2368/2015/06/28/final-four-map/</link><guid isPermaLink="false">e8347cfa-6d6e-4770-8db8-1e461f40c702</guid><dc:creator>Krom</dc:creator><pubDate>Sun, 28 Jun 2015 23:45:00 GMT</pubDate><content:encoded>&lt;p&gt;I'm not going to lie, as odd as it may seem I don't follow sports too much. The arguments my friends have is the closet thing to ESPN to me. Anyway, during the national championship I thought it would be cool to scrape some data from Twitter just to see what folks were talking about.I believe I got roughly 11000 tweets. Check it out.. &lt;strong&gt;Oh yeah it is interactive, so click around and see who was hating.&lt;/strong&gt;  &lt;/p&gt;
 
 &lt;iframe width="100%" height="520" frameborder="0" src="https://lkromah.cartodb.com/viz/8170a7dc-dd93-11e4-a554-0e0c41326911/embed_map" allowfullscreen webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""&gt;&lt;/iframe&gt;</content:encoded></item><item><title>Prelude</title><description>&lt;p&gt;I have always enjoyed good journalism, so I thought it would be a cool idea for me to start something of my own. I will share my projects, ideas, and things that I learn every now and then. A little about myself.....I am a young black male, computer science&lt;/p&gt;</description><link>http://localhost:2368/2015/06/28/welcome-to-ghost/</link><guid isPermaLink="false">8151ded2-654d-46b6-a7bc-918de761d50d</guid><category>Getting Started</category><dc:creator>Krom</dc:creator><pubDate>Sun, 28 Jun 2015 05:39:22 GMT</pubDate><content:encoded>&lt;p&gt;I have always enjoyed good journalism, so I thought it would be a cool idea for me to start something of my own. I will share my projects, ideas, and things that I learn every now and then. A little about myself.....I am a young black male, computer science background, hypebeast, and scholar. Hope you enjoy.&lt;/p&gt;</content:encoded></item></channel></rss>
